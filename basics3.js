@@ -22,5 +22,36 @@ for (let i = 0; i < marks.length; i++) {
     sum = sum + marks[i]
 }
 console.log(sum)
+//reduce filter map
 let total = marks.reduce((sum, mark) => sum + mark, 0)
 console.log(total)
+var scores = [12, 13, 14, 16]
+//create new array with even numbers of scores array
+var evenScores = []
+for (let i = 0; i < scores.length; i++) {
+    if (scores[i] % 2 == 0) {
+        evenScores.push(scores[i])
+    }
+}
+console.log(evenScores)
+let newFilterEvenScores = scores.filter(score => score % 2 == 0)
+console.log(newFilterEvenScores)
+
+//map
+////create new array with even numbers and multiply each number with 3 of scores array
+let mappedArray = newFilterEvenScores.map(score => score * 3)
+console.log(mappedArray)
+let sumArray = mappedArray.reduce((sum, mark) => sum + mark, 0)
+console.log(sumArray)
+
+var scores1 = [12, 13, 14, 16]
+let sumValues = scores1.filter(score => score % 2 == 0).map(score => score * 3).reduce((sum, mark) => sum + mark, 0)
+console.log(sumValues)
+
+let fruits = ["banana", "mango", "pomegrante", "apple"]
+console.log(fruits.sort())
+console.log(fruits.reverse())
+
+var scores2 = [12, 0o3, 19, 16, 14] //9
+// console.log(scores2.sort())
+console.log(scores2.sort((a, b) => a - b))
