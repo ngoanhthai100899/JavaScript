@@ -1,6 +1,8 @@
+import {Person} from './basics7.mjs';
 let day = "tuesday "
 console.log(day.length) //8
-console.log(subDay = day.slice(0, 4))
+let subDay = day.slice(0, 4)
+console.log(subDay)
 console.log(day[1])
 //tue  day
 let splitDay = day.split("s")
@@ -26,3 +28,6 @@ while (value !== -1) {
     value = newQuote.indexOf("day", value + 1)
 }
 console.log(count)
+
+let person = new Person("Chris", "Edward")
+console.log(person.fullName())
